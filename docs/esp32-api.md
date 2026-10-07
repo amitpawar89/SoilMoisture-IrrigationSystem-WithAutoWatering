@@ -59,7 +59,7 @@ Configure the local frontend without committing a device IP:
 VITE_ESP32_URL=http://ESP32_IP_ADDRESS
 ```
 
-When `VITE_ESP32_URL` is absent, the app explicitly uses centralized mock data and labels the header `MOCK MONITORING`. When configured, it polls `/api/data` every 10 seconds and labels the header `LIVE MONITORING`.
+When `VITE_ESP32_URL` is absent, the app explicitly uses centralized mock data and labels the header `MOCK MONITORING`. When configured, it polls `/api/data` every 5 seconds and labels the header `LIVE MONITORING`.
 
 If a live request fails after a successful response, the UI retains the last known readings and marks the connection `ESP32 offline`. It does not replace disconnected live data with fake values.
 
